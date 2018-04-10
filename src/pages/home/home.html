@@ -1,0 +1,33 @@
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img src="assets/logo-explora-panama2.png">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+
+<ion-header>
+    <ion-toolbar color="dark">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Mi lista</ion-title>
+      <ion-buttons start>
+          <button ion-button icon-only color="royal">
+            <ion-icon name="search"></ion-icon>
+          </button>
+      </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="card-background-page">
+
+  <ion-card *ngFor="let item of modalc">
+      <img src="{{item.img}}"(click)="openModal(item)"/>
+      <div class="card-title" (click)="openModal(item)">{{item.titulo}}</div>
+      <div class="card-subtitle" (click)="openModal(item)">{{item.id}}</div>
+  </ion-card>
+
+  <div class="bottom-border"></div>
+  <p class="textmore">¿Buscas más?</p>
+  <button ion-button class="btn" round outline (click)="openPageI()" >Ver más</button>
+</ion-content>

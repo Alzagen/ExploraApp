@@ -1,0 +1,65 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar color="dark">
+      <ion-title>Explora App</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="menu">
+    <ion-list no-lines>
+      <ion-item menuClose (click)="openPage(pages[0])" color="dark">
+        <ion-icon name="clipboard" item-start></ion-icon>
+        Mi lista
+      </ion-item>
+    </ion-list>
+    <div class="bottom-border"></div>
+    <ion-list no-lines>
+      <ion-item menuClose (click)="openPage(pages[7])" color="dark">
+        <ion-icon name="create" item-start></ion-icon>
+        Intereses
+      </ion-item>
+      <ion-item menuClose (click)="openPage(pages[3])" color="dark">
+        <ion-icon name="heart" item-start></ion-icon>
+        Favoritos
+      </ion-item>
+    </ion-list>
+    <div class="bottom-border"></div>
+    <ion-list no-lines>
+      <ion-item menuClose (click)="openPage(pages[4])" color="dark">
+        <ion-icon name="compass" item-start></ion-icon>
+        Explora
+      </ion-item>
+      <ion-item menuClose (click)="openPage(pages[6])" color="dark">
+        <ion-icon name="color-palette" item-start></ion-icon>
+        Eventos
+      </ion-item>
+      <ion-item menuClose (click)="openPage(pages[5])" color="dark">
+        <ion-icon name="easel" item-start></ion-icon>
+        Cursos
+      </ion-item>
+    </ion-list>
+    <div class="bottom-border"></div>
+    <ion-list no-lines>
+      <ion-item menuClose (click)="openPage(pages[1])" color="dark">
+        <ion-icon name="pricetag" item-start></ion-icon>
+        Reservaciones
+      </ion-item>
+      <ion-item menuClose (click)="openPage(pages[2])" color="dark">
+        <ion-icon name="call" item-start></ion-icon>
+        Contactos
+      </ion-item>
+    </ion-list>
+    <div class="bottom-border"></div>
+    <ion-list no-lines >
+      <ion-item menuClose (click)="openPage(pages[1])" color="dark">
+        Sobre ExploraApp
+      </ion-item>
+    </ion-list>
+
+
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

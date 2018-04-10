@@ -1,0 +1,8 @@
+{
+  "name": "ExploraApp",
+  "app_id": "ebe28fde",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

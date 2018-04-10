@@ -1,0 +1,145 @@
+page-modal {
+   
+}
+
+.header-text{
+    margin: 15px;
+    text-align: center;
+    color: white;
+}
+
+.title{
+    font-size: 2.0em;
+    font-weight: bold;
+}
+
+.desc1{
+    font-size: 1.2em;
+
+}
+
+.desc2{
+    font-size: 1em;
+
+}
+
+.modal{
+    background: no-repeat center center fixed;
+    height: 100%; 
+    width: 100%; 
+    background-color: rgb(72, 138, 255);
+    background-size: cover;
+}
+
+.container{
+    background-color: rgba(56, 0, 107, 0.7);
+}
+
+.header{
+    position: relative;
+
+    .back{
+        position: relative;
+        font-size: 35px;
+        color: #FFF;
+    }
+
+    .favorite{ 
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        font-size: 35px;
+        color: #FFF;
+    }
+}
+
+.hide {
+    display: none;
+  }
+
+//------------- INICIO Cubos --------------------
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    background-color: white;
+    border-radius: 6px 6px 6px 6px;
+    text-align: center;
+}
+
+.containerbox {
+    padding: 2px 16px;
+    background-color: white;
+    border-radius: 6px 6px 6px 6px;
+}
+
+.titlebox{
+    padding-top: 10px;
+    font-size: 1.0em;
+}
+
+.descbox{
+    padding-top: 0px;
+    font-size: 0.9em;
+}
+
+//------------- FIN Cubos --------------------
+
+//------------- INICIO Cubos AUDIO --------------------
+
+.card-audio {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 6px 6px 6px 6px;
+    text-align: center;
+}
+
+.containerbox-audio {
+    padding: 2px 16px;
+    border-radius: 6px 6px 6px 6px;
+}
+
+
+.playpause label { 
+    display: block; 
+    box-sizing: border-box; 
+    width: 0; 
+    height: 37px; 
+    border-color: transparent transparent transparent #fff; 
+    transition: 100ms all ease; 
+    cursor: pointer; 
+    border-style: double; 
+    border-width: 0px 0 0px 30px;
+    
+} 
+
+.playpause input[type="checkbox"] { 
+    visibility: hidden; 
+    
+} 
+
+.playpause input[type="checkbox"]:checked + label { 
+    border-style: solid; border-width: 18px 0 18px 30px; 
+    
+} 
+
+.playpause{
+    border:4px solid #fff;
+    border-radius:50%;
+    height:75px;
+    width:75px;
+    text-align:center;
+    position:relative;
+    background-color: rgba(72, 138, 255,0.7);
+}
+
+label{
+    position:absolute ;
+    left:22px;
+    top:17px;
+}
+
+//------------- FIN Cubos AUDIO --------------------
+
