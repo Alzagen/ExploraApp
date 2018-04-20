@@ -11,11 +11,15 @@
       <button ion-button menuToggle>
         <ion-icon name="menu"></ion-icon>
       </button>
-      <ion-title>Mi lista</ion-title>
+      <ion-title *ngIf="!isSearchbarOpened">Mi lista</ion-title>
       <ion-buttons start>
-          <button ion-button icon-only color="royal">
-            <ion-icon name="search"></ion-icon>
-          </button>
+          
+      </ion-buttons>
+      <ion-searchbar *ngIf="isSearchbarOpened" showCancelButton="true" (ionCancel)="isSearchbarOpend=false"></ion-searchbar>
+      <ion-buttons end>
+        <button ion-button icon-only color="royal" *ngIf="!isSearchbarOpened" (click)="isSearchbarOpened=true">
+          <ion-icon name="search"></ion-icon>
+        </button>
       </ion-buttons>
     </ion-toolbar>
 </ion-header>

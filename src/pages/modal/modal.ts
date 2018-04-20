@@ -107,12 +107,16 @@ export class ModalPage {
   */
 
   isliked(id) {
-   /* if (this.userlike.getItem(id)) {
+  /*if (this.userlike.getItem(id)) {
       this.liked = true;
     } else {
       this.liked = false;
-    }
-    return true; */
+    } */
+    return true; 
+  }
+
+  like(id){
+    this.userlike.setItem(id);
   }
 
   closeModal() {

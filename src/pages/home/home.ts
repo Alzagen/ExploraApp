@@ -1,7 +1,6 @@
-import { Component, ViewChild} from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Component} from '@angular/core';
 import { NavController, ModalController, ModalOptions } from 'ionic-angular';
-import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
+import { AngularFirestore, AngularFirestoreCollection} from 'angularfire2/firestore';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
 import { InteresesPage } from '../../pages/intereses/intereses';
 
@@ -28,6 +27,8 @@ export class HomePage {
   myModalData;
   modalCollection: AngularFirestoreCollection<MoDal>;
   modalc: MoDal[];
+
+  public isSearchbarOpened = false;
  
   constructor(public navCtrl: NavController, private modal: ModalController, private asf: AngularFirestore,
               public NativePageTransitions: NativePageTransitions) {
