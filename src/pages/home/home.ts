@@ -1,5 +1,5 @@
 import { Component} from '@angular/core';
-import { NavController, ModalController, ModalOptions } from 'ionic-angular';
+import { NavController, ModalController, ModalOptions, LoadingController} from 'ionic-angular';
 import { AngularFirestore, AngularFirestoreCollection} from 'angularfire2/firestore';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
 import { InteresesPage } from '../../pages/intereses/intereses';
@@ -31,7 +31,7 @@ export class HomePage {
   public isSearchbarOpened = false;
  
   constructor(public navCtrl: NavController, private modal: ModalController, private asf: AngularFirestore,
-              public NativePageTransitions: NativePageTransitions) {
+              public NativePageTransitions: NativePageTransitions, public loading: LoadingController) {
    
   }
 
@@ -39,6 +39,11 @@ export class HomePage {
     this.splash = false;
     setTimeout(() => this.splash = false, 4000);
 
+    let loader = this.loading.create({
+      content: "Cargando exhibiciones...",
+    });
+
+    loader.present().then(() => {
     this.modalCollection = this.asf.collection('exhibiciones');
     this.modalCollection.snapshotChanges().subscribe( modalList => {
       this.modalc = modalList.map(item => {
@@ -49,6 +54,10 @@ export class HomePage {
         }
       })
     })
+    setTimeout(() => {
+      loader.dismiss();
+    }, 3000);
+    });
   }
 
   openModal(item : MoDal){

@@ -1,34 +1,29 @@
 <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
 <ion-header>
-    <ion-toolbar color="dark">
-      <button ion-button menuToggle>
+  <ion-toolbar color="dark">
+    <button ion-button menuToggle>
         <ion-icon name="menu"></ion-icon>
       </button>
-      <ion-title>Intereses</ion-title>
-      <ion-buttons start>
-          <button ion-button icon-only color="royal">
-            <ion-icon name="search"></ion-icon>
+    <ion-title>Intereses</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal">
+              <ion-icon name="checkmark"></ion-icon>
+              </button>
+      <button ion-button icon-only color="royal">
+          <ion-icon name="refresh"></ion-icon>
           </button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-content class="background-page">
-    <div class="intereses">
-      <ul class="choice-list">
-        <li class="checkbox check is-checked"></li>
-        <li class="checkbox star"></li>
-        <li class="checkbox email is-checked"></li>
-        <li class="checkbox bell"></li>
-        <li class="checkbox map"></li>
-        <li class="checkbox wifi is-checked"></li>
-      </ul>
-      <div class="clear"></div>
-    </div>
-    <ion-row align-items-center> asdasd</ion-row>
-    <button ion-button color="danger"  class="btn" round>Reiniciar mi lista</button>
-    <button ion-button color="secondary" class="btn" round>Actualizar mi lista</button>
-  </ion-content>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 
-  
-    
+<ion-content class="background-page">
+  <div class="center">
+    <p>
+      <input type="checkbox" name="A" class="a" />
+      <input type="checkbox" name="B" class="b" />
+      <input type="checkbox" name="C" class="c" />
+    </p>
+  </div>
+  <button ion-button color="danger" class="btn" round>Reiniciar mi lista</button>
+  <button ion-button color="secondary" class="btn" round>Actualizar mi lista</button>
+</ion-content>

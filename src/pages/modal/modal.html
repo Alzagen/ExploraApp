@@ -3,7 +3,7 @@
     <div class="header" >
       <ion-icon class="back" name="arrow-back" (click)="closeModal()"></ion-icon>
     </div>
-    <button ion-button icon-only > <ion-icon ios="ios-heart-outline" md="md-heart-outline" class="favorite" *ngIf= "isliked((modal | async)?.id)=true"></ion-icon>
+    <button ion-button icon-only > <ion-icon ios="ios-heart-outline" md="md-heart-outline" class="favorite"></ion-icon>
     </button>
     <div class="header-text">
       <h1 class="title">{{ (modal | async)?.titulo }}</h1>

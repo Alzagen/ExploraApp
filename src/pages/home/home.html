@@ -11,9 +11,8 @@
       <button ion-button menuToggle>
         <ion-icon name="menu"></ion-icon>
       </button>
-      <ion-title *ngIf="!isSearchbarOpened">Mi listapp</ion-title>
+      <ion-title *ngIf="!isSearchbarOpened">Mi lista</ion-title>
       <ion-buttons start>
-          
       </ion-buttons>
       <ion-searchbar *ngIf="isSearchbarOpened" showCancelButton="true" (ionCancel)="isSearchbarOpend=false"></ion-searchbar>
       <ion-buttons end>

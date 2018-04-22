@@ -8,6 +8,7 @@ import { ListPage } from '../pages/list/list';
 import { AboutPage } from '../pages/about/about';
 import { ModalService } from '../services/modals.services';
 import { NativeStorage } from '@ionic-native/native-storage';
+import { Network } from '@ionic-native/network';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -82,6 +83,7 @@ export const firebaseConfig = {
     NativeStorage,
     HttpClientModule,
     HttpClient,
+    Network
   ]
 })
 export class AppModule {}

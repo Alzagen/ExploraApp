@@ -1,7 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, AlertController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Network } from '@ionic-native/network';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
@@ -25,7 +26,9 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public NativePageTransitions: NativePageTransitions) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, 
+              public NativePageTransitions: NativePageTransitions,
+              private network: Network, private alertCtrl: AlertController) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -40,6 +43,18 @@ export class MyApp {
       { title: 'Intereses', component: InteresesPage },
     ];
 
+    if(!this.network.type){
+      let alert = this.alertCtrl.create({
+        title: 'Ups!',
+        message: 'Parece que tienes problemas con la conexion',
+        buttons: [{
+          text: "Reintentar",
+          handler: () => { this.platform.exitApp(); }
+        }]
+      })
+      alert.present();
+    }
+
   }
 
   initializeApp() {
@@ -50,6 +65,8 @@ export class MyApp {
       this.splashScreen.hide();
     });
   }
+
+ 
 
   openPage(page) {
     // Reset the content nav to have just this page

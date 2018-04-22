@@ -3,7 +3,7 @@ page-intereses {
 }
 
 .background-page{
-    background: #6a1b9a;
+    background: #38006b;
 }
 
 .btn{
@@ -16,143 +16,98 @@ page-intereses {
     margin-bottom: 110%;
 }
 
-body {
-    background-color: #222;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  .clear {
-      clear:both;
-  }
-  .mrgn-50 {
-      margin-top:50px}
-  
-  a { color:#FFF; text-decoration:none}
-  a:hover { color:#09F; text-decoration:none}
-  h1 {
-      margin-top:50px;
-      color:#FFF;
-      font-size:3em; 
-      text-align:center;}
-  
-  .choice-list {
-    margin: 50px auto;
-    width: 840px;
-    display: block;
-    padding: 0;
-  }
-  
-  .checkbox {
-    float: left;
-    width: 80px;
-    height: 80px;
-    cursor: pointer;
-    -moz-border-radius: 80px;
-    -webkit-border-radius: 80px;
-    border-radius: 80px;
-    display: block;
-    background-color: rgba(0, 0, 0, 0.25);
-    margin: 20px;
-    -moz-transition: all 0.15s cubic-bezier(0.5, 0, 0, 1.5);
-    -o-transition: all 0.15s cubic-bezier(0.5, 0, 0, 1.5);
-    -webkit-transition: all 0.15s cubic-bezier(0.5, 0, 0, 1.5);
-    transition: all 0.15s cubic-bezier(0.5, 0, 0, 1.5);
-  }
-  .checkbox:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  .checkbox:hover:after {
-    color: white;
-  }
-  .checkbox:after {
-    line-height: 85px;
-    font-family: "FontAwesome";
-    display: block;
-    content: "";
-    color: rgba(255, 255, 255, 0.5);
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    -moz-transform: scale(0.5);
-    -ms-transform: scale(0.5);
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
-    -moz-border-radius: 100%;
-    -webkit-border-radius: 100%;
-    border-radius: 100%;
-    font-size: 54px;
-    -moz-transition: all 0.15s cubic-bezier(0.5, 0, 0, 1.5), font-size 0.35s cubic-bezier(0.5, 0, 0, 3);
-    -o-transition: all 0.15s cubic-bezier(0.5, 0, 0, 1.5), font-size 0.35s cubic-bezier(0.5, 0, 0, 3);
-    -webkit-transition: all 0.15s cubic-bezier(0.5, 0, 0, 1.5), font-size 0.35s cubic-bezier(0.5, 0, 0, 3);
-    transition: all 0.15s cubic-bezier(0.5, 0, 0, 1.5), font-size 0.35s cubic-bezier(0.5, 0, 0, 3);
-  }
-  .checkbox.is-checked:after {
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    font-size: 44px;
-    color: white;
-  }
-  .checkbox.is-checked:hover:after {
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-  
-  .check:after {
-    content: "\f00c";
-    background-color: rgba(165, 194, 92, 0);
-  }
-  .check.is-checked:after {
-    background-color: #a5c25c;
-  }
-  
-  .heart:after {
-    content: "\f004";
-    background-color: rgba(241, 76, 56, 0);
-  }
-  .heart.is-checked:after {
-    background-color: #f14c38;
-  }
-  
-  .star:after {
-    content: "\f005";
-    background-color: rgba(255, 202, 37, 0);
-  }
-  .star.is-checked:after {
-    background-color: #ffca25;
-  }
-  
-  .email:after {
-    content: "\f1fa";
-    background-color: rgba(145, 61, 136, 0);
-  }
-  .email.is-checked:after {
-    background-color: #913D88;
-  }
-  
-  .bell:after {
-    content: "\f0f3";
-    background-color: rgba(244, 179, 80, 0);
-  }
-  .bell.is-checked:after {
-    background-color: #F4B350;
-  }
-  
-  .map:after {
-    content: "\f041";
-    background-color: rgba(68,108,179, 0);
-  }
-  .map.is-checked:after {
-    background-color: #446CB3;
-  }
-  
-  .wifi:after {
-    content: "\f1eb";
-    background-color: rgba(224, 130, 131, 0);
-  }
-  .wifi.is-checked:after {
-    background-color: #E08283;
-  }
+.center {
+  margin: 10px;
+}
+
+.center input[type="checkbox"] {
+  position: relative;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  background: #ebebeb;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+}
+
+.center input[type="checkbox"]:after { 
+  content: ''; 
+  font-size: 2em;
+  text-align: center;
+  line-height: 70px;
+  color: #555555;
+  position: absolute;
+  margin: auto auto;
+  left: 0; right: 0; bottom: 0; top: 0;
+  display: block;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+ }
+
+.center input[type="checkbox"]:before { 
+  position: absolute;
+  margin: auto auto;
+  left: 0; right: 0; bottom: 0; top: 0;
+  content: '';
+  display: block; 
+  height: 80px;
+  width: 80px;
+  border: 0px solid #fff;
+  border-radius: 50%;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -ms-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+
+.center input[type="checkbox"]:checked:before {
+  height: 100%;
+  width: 100%;
+  background: #dd3635;
+  border: none;
+  border-radius: 47%;
+}
+
+.center input[type="checkbox"].a:checked:before {
+  height: 100%;
+  width: 100%;
+  background: #3b21d6;
+  border: none;
+ border-radius: 47%;
+}
+
+.center input[type="checkbox"]:focus {
+  outline: none;
+}
+
+.center input[type="checkbox"].a:after {
+  content:url("http://inhaiti.net/media/widgetkit/pasteur_mohammed-98374b656d57dd04c52b1d1a8c6e6d09.png"); 
+} 
+.center input[type="checkbox"].b:after { 
+  content:url("http://inhaiti.net/media/widgetkit/pasteur_toussaint-a2b95eb262e5d31fcc18182d0a09f5a8.png"); 
+}
+.center input[type="checkbox"].c:after { 
+  content: url("http://ecsbaglessschool.com/assets/images/people-avatar-7.png"); }
+
+
+.center input[type="checkbox"]:checked:after { 
+  content: '✓'; } 
+.center input[type="checkbox"].a:checked:after {
+  content:url("http://inhaiti.net/media/widgetkit/pasteur_toussaint-a2b95eb262e5d31fcc18182d0a09f5a8.png"); 
+}
+.center input[type="checkbox"].b:checked:after {
+  content:url("http://inhaiti.net/media/widgetkit/pasteur_mohammed-98374b656d57dd04c52b1d1a8c6e6d09.png"); 
+} 
